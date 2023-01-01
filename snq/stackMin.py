@@ -1,6 +1,3 @@
-from queue import Empty
-
-
 class Stack:
     def __init__(self):
         self.stack = []
@@ -24,6 +21,9 @@ class Stack:
         if popped_val == self.minStack[-1]:
             self.minStack.pop()
 
+    def top(self):
+        return self.stack[-1]
+
     def min(self):
         return self.minStack[-1]
 
@@ -39,5 +39,6 @@ a.push(1)
 a.push(4)
 a.pop()
 print(a.min())
+print(a.top())
 a.display()
 
